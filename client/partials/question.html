@@ -1,0 +1,14 @@
+<div ng-controller = 'userController'>
+  <a href="#/">Home</a>
+  <a href="/logout">Logout</a>
+<div ng-controller = 'questionController'>
+<h1>New Question</h1>
+<form ng-submit = 'create()'>
+<p>Question: <textarea ng-model='question.content' rows="8" cols="40"></textarea></p>
+<p>Description: <textarea ng-model = 'question.description' rows="8" cols="40"></textarea></p>
+<p>(optional)</p>
+<button type="button"><a href="#/">Cancel</a></button>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>

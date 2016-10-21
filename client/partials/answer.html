@@ -1,0 +1,17 @@
+
+<div ng-controller = 'userController'>
+<div ng-controller = 'dashboardController'>
+<p><a href="#/">Home</a> | <a href="#/question/{{question._id}}">Go Back to Question</a></p>
+<a href="/logout">Logout</a>
+<h1>{{question.content}}</h1>
+<h5>{{question.description}}</h5>
+<form ng-submit = 'add(answer, question._id)'>
+<p>Your Answer: <textarea ng-model = 'answer.content' rows="8" cols="40"></textarea></p>
+<p>Supporting details for your answer: <textarea ng-model ='answer.details' rows="8" cols="40"></textarea></p>
+<p>(optional)</p>
+<input type="hidden" value="{{question._id}}">
+<p><button type="button"><a href="#/">Cancel</a></button></p>
+<p><input type="submit" value="Submit"></p>
+</form>
+</div>
+</div>

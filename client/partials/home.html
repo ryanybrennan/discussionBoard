@@ -1,0 +1,19 @@
+<div ng-controller = 'userController'>
+<h2>Hi {{currentUser.name}}!</h2>
+<div ng-controller = 'questionController'>
+<a href="#/new_question">Add a Question</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="/logout">Logout</a>
+
+<p>Search: &nbsp&nbsp&nbsp&nbsp <input type="text" ng-model ='filter'></p>
+<table>
+  <th>Question</th>
+  <th>Answers</th>
+  <th>Action</th>
+  <tr ng-repeat = 'question in questions | filter:filter track by $index'>
+    <td>{{question.content}}</td>
+    <td>{{question._answers.length}}</td>
+    <td><a href="#/question/{{question._id}}">Show</a> &nbsp&nbsp <a href="#/question/{{question._id}}/new_answer">Answer</a></td>
+  </tr>
+</table>
+</div>
+</div>
