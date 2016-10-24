@@ -5,7 +5,7 @@
 <div>
   <h1>{{question.content}}</h1>
   <h5>{{question.description}}</h5>
-  <div ng-repeat = 'answer in question._answers'>
+  <div ng-repeat = 'answer in question._answers | orderBy: "-likes"'>
     <p>{{answer.username}}:</p>
     <p><b>{{answer.content}}</b> &nbsp&nbsp&nbsp {{answer.likes}} likes <input type="button" ng-click = 'like(answer)' value="Like!"></p>
     <p>{{answer.details}}</p><hr>
